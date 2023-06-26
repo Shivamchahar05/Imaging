@@ -1,0 +1,247 @@
+.container {
+    background-color: white;
+    .head {
+        margin-left: 96px;
+
+        .headunder {
+            display: flex;
+            p {
+                font-size: 20px;
+                padding-left: 15px;
+                padding-top: 15px;
+                color: gray;
+            }
+            .myprofile {
+                font-weight: 500;
+                color: hsl(244deg 48% 31%);
+            }
+        }
+    }
+    .main {
+        background-color: hsl(204deg 16% 94%);
+        .mainunder {
+            margin-left: 110px;
+            padding-top: 20px;
+            .my {
+                font-size: 25px;
+                font-weight: 600;
+                color: hsl(244deg 48% 31%);
+            }
+            .firstmain {
+                display: flex;
+                .sidecontent {
+                    box-shadow: 0px 3px 5px 5px white;
+                    border-radius: 10px;
+                    width: 300px;
+
+                    height: 350px;
+                    .image {
+                        padding: 20px;
+                        .edit {
+                            margin-top: 10px;
+                            button {
+                                background-color: white;
+                                border: none;
+                                border-radius: 10px;
+                                box-shadow: 0px 1px 2px 2px lightgrey;
+                                width: 100%;
+                                font-size: 18px;
+                                padding: 10px;
+                                color: lightgreen;
+                            }
+                        }
+
+                        .text {
+                            margin-top: 30px;
+                            .icon {
+                                margin-top: 10px;
+                                span {
+                                    margin-left: 10px;
+                                }
+                            }
+                        }
+                        .userimage {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            .test {
+                                margin-left: 21px;
+                                margin-top: 10px;
+                                font-size: 17px;
+                                font-weight: 500;
+                            }
+                            .imageunder {
+                                height: 100px;
+                                width: 100px;
+                                border: 1px solid;
+                                border-radius: 10px;
+                                .fa-user {
+                                    font-size: 80px;
+                                    display: flex;
+                                    justify-content: center;
+                                    margin-top: 5px;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                //
+                .rightmain {
+                    margin-left: 30px;
+                    width: 100%;
+                    margin-right: 50px;
+                    .firstbox {
+                        border-radius: 10px;
+                        box-shadow: 0px 0px 5px 5px white;
+                        padding: 20px;
+                        height: 400px;
+                        .photo {
+                            font-size: 20px;
+                            margin-bottom: 10px;
+                            color: hsl(244deg 48% 31%);
+                            font-weight: 500;
+                        }
+                        .carousal {
+                            width: 100%;
+                            box-shadow: 0px 1px 2px 2px lightgrey;
+                            height: 370px;
+                           
+                        }
+                    }
+
+                    .secondbox {
+                        border-radius: 10px;
+                        box-shadow: 0px 0px 5px 5px white;
+                        padding: 20px;
+                        height: 50px;
+                        margin-top: 20px;
+                        .bio {
+                            font-weight: 500;
+                            font-size: 20px;
+                            color: hsl(244deg 48% 31%);
+                        }
+                    }
+
+                    .thirdbox {
+                        border-radius: 10px;
+                        box-shadow: 0px 0px 5px 5px white;
+                        padding: 20px;
+                        height: 200px;
+                        margin-top: 20px;
+                        .document {
+                            font-weight: 500;
+                            font-size: 20px;
+                            color: hsl(244deg 48% 31%);
+                        }
+                        .underdocument{
+                            display: flex;
+                            margin-top: 20px;
+                           img{
+                               height: 120px;
+                           }
+                            .CR12{
+                                margin-left: 20px;
+                            }
+                            .KRA{
+                                margin-left: 20px;
+                            }
+                            .Regulatory1{
+                                margin-left: 20px;
+                            }
+                            .Regulatory2{
+                                margin-left: 20px;
+                            }
+                            .Regulatory3{
+                                margin-left: 20px;
+                            }
+                            p{
+                                font-weight: 500;
+                                text-align: center;
+                            }
+                        }
+                    }
+
+                    .fourthbox {
+                        border-radius: 10px;
+                        box-shadow: 0px 0px 5px 5px white;
+                        padding: 20px;
+                        height: 200px;
+                        margin-top: 20px;
+                        .insurancecompany {
+                            font-weight: 500;
+                            font-size: 20px;
+                            color: hsl(244deg 48% 31%);
+                        }
+                        .insurence{
+                           display: flex;
+                           p{
+                               text-align: center;
+                           }
+                            img {
+                                height: 120px;
+                                width: 120px;
+                                margin-top: 20px;
+                                border-radius: 30px;
+                                margin-left: 30px;
+    
+                            }
+    
+                        }
+                        .companyname {
+                            font-weight: 500;
+                            font-size: 17px;
+                            margin-top: 10px;
+                        }
+                    }
+
+                    .fifthbox {
+                        border-radius: 10px;
+                        box-shadow: 0px 0px 5px 5px white;
+                        padding: 20px;
+                      
+                        margin-top: 20px;
+                        .fifthfrist {
+                            display: flex;
+                            justify-content: space-between;
+                            margin-top: 10px;
+                            .payment {
+                                font-weight: 500;
+                                font-size: 20px;
+                                color: hsl(244deg 48% 31%);
+                            }
+                            .addbutton {
+                                button {
+                                    height: 40px;
+                                    padding-left: 20px;
+                                    padding-right: 20px;
+                                    font-size: 15px;
+                                    padding-top: 10px;
+                                    padding-bottom: 10px;
+                                    color: lightgreen;
+                                    background-color: white;
+                                    border: none;
+                                    border-radius: 10px;
+                                    box-shadow: 0px 2px 4px 2px lightgray;
+                                }
+                            }
+                            
+                            
+                        }
+                        .nodeatils {
+                            border-radius: 10px;
+                            box-shadow: 0px 0px 5px 5px white;
+                            padding: 20px;
+                            margin-top: 20px;
+                            display: flex;
+                            justify-content: center;
+                             .textnodetail{
+                                 font-size: 16px;
+                             }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

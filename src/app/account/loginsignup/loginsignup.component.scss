@@ -1,0 +1,28 @@
+.container {
+    display: flex;
+
+    .images {
+        display: flex;
+        img {
+            height: 700px;
+            width: 500px;
+        }
+    }
+    .content {
+        overflow-x: scroll;
+        padding: 40px;
+        .sign {
+            margin-left: 20px;
+        }
+        
+    }
+}
+.active-link{
+    color: #00b790;
+    border-bottom: 2px solid #00b790;
+}
+nav {
+    border-bottom: none;
+   
+
+}

@@ -1,0 +1,53 @@
+<div class="container">
+   
+    <form [formGroup]="formservice.register">
+        <h2>Add Documents</h2>
+        <ng-container formGroupName="document">
+            <div class="logo">
+                <p> Tax Compliance <i
+                        class="fa-solid fa-star-of-life"></i><br><div><mat-icon aria-hidden="false" aria-label="Example home icon" *ngIf="documentcontrols.get('tax_compliance')?.value"   class="cancel" (click)="removedoc('tax_compliance')">cancel</mat-icon><i class="fa-solid fa-circle-check" *ngIf="documentcontrols.get('tax_compliance')?.value"></i></div>
+                </p>
+                <button mat-button (click)="fileInput1.click()"><i class="fa-solid fa-upload"></i>
+                    <input #fileInput1 type="file" style="display:none;" (change)="onChange($event,'tax_compliance')">
+                </button>
+            </div>
+          
+            <div class="logo">
+                <p> CR12 <i class="fa-solid fa-star-of-life"></i><br><div><mat-icon aria-hidden="false" aria-label="Example home icon" *ngIf="documentcontrols.get('cr_12')?.value" class="cancel" (click)="removedoc('cr_12')">cancel</mat-icon><i class="fa-solid fa-circle-check" *ngIf="documentcontrols.get('cr_12')?.value"></i></div></p>
+                <button mat-button (click)="fileInput2.click()"><i class="fa-solid fa-upload"></i>
+                    <input #fileInput2 type="file" style="display:none;"  (change)="onChange($event,'cr_12')">
+                </button>
+            </div>
+            <div class="logo">
+                <p> KRA Pin Certificate <i
+                        class="fa-solid fa-star-of-life"></i><br><div ><mat-icon aria-hidden="false" aria-label="Example home icon" *ngIf="documentcontrols.get('kra_pin_certificate')?.value" class="cancel" (click)="removedoc('kra_pin_certificate')">cancel</mat-icon><i class="fa-solid fa-circle-check" *ngIf="documentcontrols.get('kra_pin_certificate')?.value"></i></div></p>
+                <button mat-button (click)="fileInput3.click()"><i class="fa-solid fa-upload"></i>
+                    <input #fileInput3 type="file" style="display:none;"   (change)="onChange($event,'kra_pin_certificate')">
+                </button>
+            </div>
+            <div class="logo">
+                <p> Regulatory Licence 1 <i
+                        class="fa-solid fa-star-of-life"></i><br><div><mat-icon aria-hidden="false" aria-label="Example home icon" *ngIf="documentcontrols.get('regulator_licenses_1')?.value" class="cancel" (click)="removedoc('regulator_licenses_1')">cancel</mat-icon><i class="fa-solid fa-circle-check" *ngIf="documentcontrols.get('regulator_licenses_1')?.value"></i></div></p>
+                <button mat-button (click)="fileInput4.click()"><i class="fa-solid fa-upload"></i>
+                    <input #fileInput4 type="file" style="display:none;" (change)="onChange($event,'regulator_licenses_1')">
+                </button>
+            </div>
+            <div class="logo">
+                <p> Regulatory Licence 2 <br><div><mat-icon aria-hidden="false" aria-label="Example home icon" *ngIf="documentcontrols.get('regulator_licenses_2')?.value" class="cancel" (click)="removedoc('regulator_licenses_2')">cancel</mat-icon><i class="fa-solid fa-circle-check" *ngIf="documentcontrols.get('regulator_licenses_2')?.value"></i></div></p>
+                <button mat-button (click)="fileInput5.click()"><i class="fa-solid fa-upload"></i>
+                    <input #fileInput5 type="file" style="display:none;"  (change)="onChange($event,'regulator_licenses_2')" >
+                </button>
+            </div>
+            <div class="logo">
+                <p> Regulatory Licence 3 <br><div><mat-icon aria-hidden="false" aria-label="Example home icon" *ngIf="documentcontrols.get('regulator_licenses_3')?.value" class="cancel" (click)="removedoc('regulator_licenses_3')">cancel</mat-icon><i class="fa-solid fa-circle-check" *ngIf="documentcontrols.get('regulator_licenses_3')?.value"></i></div></p>
+                <button mat-button (click)="fileInput6.click()"><i class="fa-solid fa-upload"></i>
+                    <input #fileInput6 type="file" style="display:none;"  (change)="onChange($event,'regulator_licenses_3')">
+                </button>
+            </div>
+            <div class="nav">
+                <button type="submit" (click)="submit()" [disabled]="!documentcontrols.valid" mat-raised-button color="primary" matStepperNext>Save & Next
+                </button>
+            </div>
+        </ng-container>
+    </form>
+</div>

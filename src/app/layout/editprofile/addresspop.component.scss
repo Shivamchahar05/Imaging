@@ -1,0 +1,46 @@
+.first{
+
+    .add{
+      
+       font-size: 20px;
+       margin-bottom: 30px;
+       font-weight: 500;
+   
+    }
+    .content{
+        margin-left: 30px;
+       
+        p{
+            margin: 0%;
+            font-weight: 500;
+        }
+    
+        button{
+            width: 150px;
+            background-color: aquamarine;
+            border: none;
+            border-radius: 5px;
+            margin-left: 20px;
+            height: 30px;
+            font-size: 20px;
+        }
+    }
+    }
+    
+    :host{
+        .search{
+            mat-form-field{
+                width: 500px;
+                margin-left: 20px;
+                margin-right: 20px;
+            }
+        }
+    }
+    :host{
+        .content {
+            mat-form-field{
+                width: 500px;
+                
+            }
+        }
+    }

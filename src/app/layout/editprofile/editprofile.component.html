@@ -1,0 +1,115 @@
+<div>
+    <div class="header">
+        <a class="home" (click)="home()"> Home</a>
+        <p>/</p>
+        <a (click)="myprofile()">My Profile</a>
+        <p>/</p>
+        <a class="edit">Edit</a>
+    </div>
+    <div class="main">
+        <form [formGroup]="editprofileForm" (ngSubmit)="submit()">
+            <div>
+                <p>Edit Profile</p>
+                <div class="main_under">
+                    <div>
+                        <p>Add Logo</p>
+                        <div class="edit" *ngIf="!deleteprofilpic">
+                            <a >
+                                <mat-icon class="loc" (click)="remove()">cancel</mat-icon>
+                            </a>
+                            <img class="imageunder" [src]="preview + imgpic" >
+                        </div>    
+                        <div class="add" *ngIf="deleteprofilpic">
+                            <button mat-button (click)="imagesfile.click()" class="imagesadd">
+                                <input id="file" type="file" class="form-control" multiple="" #imagesfile
+                                (change)="onlogo($event)"  style="display: none;" >
+                                <button class="btnplus">+</button>
+                            </button>
+                        </div>                   
+                        <div class="detail">
+                            <div>
+                                <p>Lab Name</p>
+                                <mat-form-field appearance="outline">
+                                    <mat-label>Lab Name</mat-label>
+                                    <input matInput formControlName="lab_name" place holder="Lab Name" />
+                                    <mat-error *ngIf=" formControls?.lab_name?.errors?.required"> *Lab Name is required
+                                    </mat-error>
+                                </mat-form-field>
+                            </div>
+                            <div>
+                                <p>Contact Number</p>
+                                <mat-form-field appearance="outline">
+                                    <mat-label>Number</mat-label>
+                                    <input matInput formControlName="contactnumber" place holder="Number" />
+                                    <mat-error *ngIf=" formControls?.contactnumber?.errors?.required"> *Contact number
+                                        is required
+                                    </mat-error>
+                                </mat-form-field>
+                            </div>
+                            <div>
+                                <p>Address</p>
+                                <mat-form-field appearance="outline">
+                                    <a   (click)="addressDialog()">
+                                        <mat-icon class="loc">near_me</mat-icon>
+                                    </a>
+                                    <mat-label>Address</mat-label>
+                                    <input matInput formControlName="physical_address" place holder="Address" />
+                                    <mat-error *ngIf=" formControls?.physical_address?.errors?.required"> *Address is required
+                                    </mat-error>
+                                </mat-form-field>
+                            </div>
+                        </div>
+                        <!-- second details -->
+                        <div class="second_details">
+                            <div>
+                                <p>Country</p>
+                                <mat-form-field appearance="outline">
+                                    <mat-label>Country</mat-label>
+                                    <mat-select formControlName="countery" >
+                                        <mat-option *ngFor="let citie of country_data" [value]=citie>
+                                            {{citie.name}}
+                                        </mat-option>
+
+                                    </mat-select>
+                                    <mat-error *ngIf=" formControls?.countery?.errors?.required"> *Country is required
+                                    </mat-error>
+                                </mat-form-field>
+                            </div>
+                            <div class="bio">
+                                <p>Bio</p>
+                                <mat-form-field appearance="outline">
+                                    <mat-label>Enter here</mat-label>
+                                    <textarea matInput place holder="First Name" formControlName="lab_bio"></textarea>
+                                </mat-form-field>
+                            </div>
+                        </div>
+                        <!-- third details -->
+                        <div class="photo">
+                            <p>Add Lab Photo</p>
+                            <div class="add">
+                                <button mat-button (click)="imagesfile.click()" class="imagesadd">
+                                    <input id="file" type="file" class="form-control" multiple="" #imagesfile
+                                    (change)="onFileChange($event)"  style="display: none;" >
+                                    <button class="btnplus">+</button>
+                                </button>
+                                <div *ngFor='let url of img;let idx=index' class="imgadd">
+                                    <img [src]="preview + url" height="100" width="100px"
+                                        style=" border-radius: 10px; margin-top: 10px; margin-left: 10px;"> <br />
+
+                                    <button (click)="removephoto(idx)">x</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- button -->
+                        <div class="btn">
+                            <div>
+                                <button class="cancel">Cancel</button>
+                                <button class="update" (click)="update()">Update</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

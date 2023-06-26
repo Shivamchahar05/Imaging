@@ -1,0 +1,14 @@
+<mat-icon aria-hidden="false" aria-label="Example home icon"  class="cancel" (click)="close()">cancel</mat-icon>
+<div class="log">
+    <h1>Are you sure want to logout</h1>
+    <mat-dialog-actions>
+        <div class="bt">
+            <div>
+                <button mat-button mat-dialog-close>Cancel</button>
+            </div>
+            <div class="second_btn">
+                <button mat-button [mat-dialog-close]="true" cdkFocusInitial (click)="logout()">Logout</button>
+            </div>
+        </div>
+    </mat-dialog-actions>
+</div>

@@ -1,0 +1,29 @@
+<div class="container"> 
+    <div>
+        <img src="/assets/Screenshot from 2022-04-28 19-13.png">
+    </div>
+    <div class="secondcon">
+        <i class="fa-solid fa-arrow-left-long"></i>
+        <mat-stepper class="stepper">
+           
+            <mat-step  state="phone" class="stepper1">
+             <app-profile></app-profile>
+            </mat-step>
+            <mat-step  state="chat" class="stepper1">
+             <app-document></app-document>
+            </mat-step>
+            <mat-step  class="stepper1">
+             <app-photo></app-photo>
+            </mat-step>
+          
+            <!-- Icon overrides. -->
+            <ng-template matStepperIcon="phone">
+              <mat-icon>call_end</mat-icon>
+            </ng-template>
+            <ng-template matStepperIcon="chat">
+              <mat-icon>forum</mat-icon>
+            </ng-template>
+          </mat-stepper>
+    </div>
+</div>
+<router-outlet></router-outlet>

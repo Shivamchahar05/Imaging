@@ -1,0 +1,60 @@
+<mat-icon aria-hidden="false" aria-label="Example home icon"  class="cancel" (click)="close()">cancel</mat-icon>
+<section>
+    <header><h1>Accept Test</h1></header>
+    <div class="tableRow">
+        <div class="loader" *ngIf="false">
+            <div class="col-3">
+                <div class="snippet" >
+                  <div class="stage">
+                    <div class="dot-flashing"></div>
+                  </div>
+                </div>
+            </div>
+        </div>
+        <div class="retrieving"  *ngIf="retrieving">
+            <h3>Retrieving benifit balance</h3>
+            <div class="spinner">
+                <div class="bounce1"></div>
+                <div class="bounce2"></div>
+                <div class="bounce3"></div>
+              </div>
+        </div>
+        <table mat-table [dataSource]="dataSource">
+            <td *ngIf="!checkbalance" style="background-color:#929292 ;"></td>
+            <ng-container matColumnDef="select">
+                <th mat-header-cell *matHeaderCellDef> Select </th>
+                <td mat-cell *matCellDef="let row">
+                     <mat-checkbox (click)="$event.stopPropagation()"
+                    (change)="$event ? selection.toggle(row) : null"
+                    [disabled]="lowBalance"
+                    [checked]="selection.isSelected(row)">
+                </mat-checkbox>
+                </td>
+            </ng-container>
+            <ng-container matColumnDef="test_name">
+                <th mat-header-cell *matHeaderCellDef> Test Name </th>
+                <td mat-cell *matCellDef="let element"> {{element?.test_name}} </td>
+            </ng-container>
+            <ng-container matColumnDef="doctor_notes">
+                <th mat-header-cell *matHeaderCellDef> Doctor Notes </th>
+                <td mat-cell *matCellDef="let element"> {{element?.doctor_notes}} </td>
+            </ng-container>
+            <ng-container matColumnDef="status">
+                <th mat-header-cell *matHeaderCellDef> Status </th>
+                <td mat-cell *matCellDef="let element" ><p class="statustest"> {{element?.status | accepttestStatus}} </p></td>
+            </ng-container>
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;" [style.backgroundColor]="checkbalance ==true ? '#f2d6de' : '#edf0f2'"></tr>
+            <tr class="noData" class="mat-row" *matNoDataRow>
+                <td class="mat-cell" colspan="9">No data matching the filter</td>
+            </tr>
+        </table>
+    </div>
+    <div *ngIf="checkbalance" style="color: red; margin-left: 20px;">
+        Member does not have sufficient balance
+    </div>
+    <div class="btn">
+        <button class="cancel" (click)="close()" mat-raised-button>Cancel</button>
+        <button class="process" (click)="openDialog()" mat-raised-button [disabled]="disabledBtn">Proceed</button>
+    </div>
+</section>

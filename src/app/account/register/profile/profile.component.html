@@ -1,0 +1,45 @@
+<section>
+    <form  [formGroup]="formservice.register">
+        <h2>Add Lab Profile details</h2>
+        <ng-container formGroupName="profile">
+        <div class="logo">
+            <mat-icon aria-hidden="false" aria-label="Example home icon" *ngIf="profileControls.get('avatar')?.value"   class="cancel" (click)="removedoc('avatar')">cancel</mat-icon>
+            <button mat-button *ngIf="!imageSrc" (click)="fileInput1.click()">+
+                <input #fileInput1 type="file" style="display:none;" (change)="readURL($event);" formControlName="avatar" >
+            </button>
+            <img *ngIf="imageSrc" [src]="previewImg" alt="logo" style="width: 80px; height: 80px">
+            <p *ngIf="!imageSrc">Add Logo</p>
+        </div>
+        <label>Lab Name</label>
+        <mat-form-field appearance="outline">
+      
+      <input matInput placeholder="Lab Name" required formControlName="lab_name" >
+            <!-- <mat-error *ngIf="profileControls.get('LabName')?.touched"> -->
+            <mat-error *ngIf="profileControls?.get('lab_name')?.errors?.required">Lab Name is Required*</mat-error>
+            <!-- </mat-error> -->
+        </mat-form-field>
+        <label>Country</label>
+        <mat-form-field appearance="outline" >
+            <!-- <mat-label>Country</mat-label> -->
+            <mat-select placeholder="Select Country" formControlName="country">
+                <mat-option value="ind">IND</mat-option>
+                <mat-option value="usa">USA</mat-option>
+                <mat-option value="uk">UK</mat-option>
+            </mat-select>
+            <mat-error *ngIf="profileControls?.get('country')?.errors?.required">*Select country</mat-error>
+        </mat-form-field>
+        <label>Address</label>
+        <mat-form-field appearance="outline">
+            <a   (click)="addressDialog()">
+                <mat-icon class="loc">near_me</mat-icon>
+            </a>
+            <input matInput placeholder="Start typing your Address"  value={{address}}  formControlName="physical_address">
+             <mat-error *ngIf="profileControls.get('physical_address')?.errors?.required">*Address is required </mat-error>
+        </mat-form-field>
+        <div class="nav">
+            <button type="submit" (click)="onsubmit()" [disabled]="!profileControls.valid"  mat-raised-button color="primary"  matStepperNext><ng-container *ngIf="!spinner">Save & Next </ng-container> 
+                <mat-spinner *ngIf="spinner" [diameter]="40"></mat-spinner> </button>
+        </div>
+        </ng-container>
+      </form>
+</section>

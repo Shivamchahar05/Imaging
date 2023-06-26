@@ -1,0 +1,196 @@
+.container {
+    background-color: white;
+    .homereq {
+        display: flex;
+        margin-left: 100px;
+        p{
+            font-size: 20px;
+            padding: 10px;
+        }
+        .home {
+            font-size: 20px;
+            font-weight: 500;
+            padding: 10px;
+            background-color: white;
+        }
+        .request {
+            color: hsl(244deg 48% 31%);
+
+            font-size: 20px;
+            font-weight: 500;
+            padding: 10px;
+            background-color: white;
+            .mat-tab-link {
+                background-color: white;
+            }
+        }
+    }
+    .main {
+        background-color: hsl(204deg 16% 94%);
+        height: 900px;
+        .selectmain {
+            margin-left: 100px;
+            margin-right: 100px;
+            .imgreq {
+                color: hsl(244deg 48% 31%);
+                font-size: 25px;
+                padding-left: 10px;
+                padding-top: 20px;
+                padding-bottom: 10px;
+                font-weight: 600;
+            }
+            .second {
+                display: flex;
+                justify-content: space-between;
+                .search{
+                    mat-form-field{
+                        width: 400px;
+                    }
+                }
+                .selectdate {
+                    display: flex;
+                    justify-content: space-between;
+                    .date {
+                        margin-left: 15px;
+                        position: relative;
+                        .cancel{
+                            position: absolute; 
+                            right: 0px; 
+                            bottom:12px;
+                            color: dimgray;
+                            
+                          }
+                    }
+                }
+            }
+            .initiatebutton{
+                display: flex;
+                justify-content: flex-end;
+                button{
+                    padding: 10px;
+                    margin-bottom: 10px;
+                    width: 200px;
+                    font-size: 20px;
+                    color: white;
+                    border: none;
+                    border-radius: 5px;
+                    background-image: linear-gradient(to right, hsl(235deg 58% 27%), hsl(151deg 36% 55%));
+                }
+            }
+            .maintab {
+                .dollorImg{
+                    height: 30px;
+                }
+                .spi{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+                table {
+                    width: 100%;
+                    background-color: hsl(204deg 16% 94%);
+                    box-shadow: -7px 0px 10px 5px white;
+                    padding: 20px;
+                    
+                    ng-container {
+                        border-bottom: none;
+                    }
+                    td{
+                        text-align: center;
+                    }
+                    th {
+                        text-align: center;
+                        color: hsl(244deg 48% 31%);
+                        font-weight: 500;
+                        font-size: 15px;
+                        background-color: white;
+                    }
+                    th:first-child {
+                        border-radius: 10px 0px 0px 10px;
+                    }
+                    th:last-child {
+                        border-radius: 0px 10px 10px 0px;
+                    }
+                    .reject {
+                        background-color: white;
+                        border: none;
+                        font-size: 15px;
+                        padding: 10px;
+                        border-radius: 8px;
+                        color: lightgreen;
+                    }
+                    .accept {
+                        margin-left: 10px;
+                        color: white;
+                        border: none;
+                        font-size: 15px;
+                        padding: 10px;
+                        border-radius: 8px;
+                        background-image: linear-gradient(to right, hsl(235deg 58% 27%), hsl(151deg 36% 55%));
+                    }
+                }
+            }
+            //
+            .paginator {
+                ::ng-deep {
+                    .mat-paginator-container {
+                        background-color: #edf0f2;
+                    }
+
+                    .mat-paginator-icon {
+                        color: rgb(90, 87, 87);
+                        width: 20px;
+                    }
+
+                    .mat-icon-button {
+                        background-color: #edf0f2;
+                        box-shadow: 0 3px 5px -1px rgba(175, 173, 173, 0.928), 0 6px 10px 0 rgba(146, 144, 144, 0.928),
+                            0 1px 18px 0 rgba(202, 200, 200, 0.945);
+                        margin: 10px;
+                        margin-right: 0;
+                        border-radius: 5px;
+                    }
+
+                    .mat-paginator-range-label {
+                        background-color: #e0f8f0;
+                        padding: 10px;
+                        border-radius: 5px;
+                        box-shadow: 0 3px 5px -1px rgba(175, 173, 173, 0.928), 0 6px 10px 0 rgba(146, 144, 144, 0.928),
+                            0 1px 18px 0 rgba(202, 200, 200, 0.945);
+                    }
+
+                    .mat-paginator-outer-container {
+                        margin-top: 20px;
+                        background-color: #edf0f2;
+                    }
+
+                    .mat-select-panel[aria-label="none"] {
+                        .mat-option-text {
+                            font-size: 1.4rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+::ng-deep {
+    .mat-form-field-appearance-outline .mat-form-field-outline {
+        background-color: white;
+        border-radius: 8px;
+    }
+}
+.mat-row .mat-cell {
+    border-bottom: 1px solid transparent;
+    border-top: 1px solid transparent;
+    cursor: pointer;
+}
+.mat-paginator {
+    background-color: hsl(204deg 16% 94%);
+}
+::ng-deep{
+    .mat-progress-spinner circle, .mat-spinner circle{
+        stroke: blue
+    }
+}
+

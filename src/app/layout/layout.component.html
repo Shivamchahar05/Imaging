@@ -1,0 +1,50 @@
+<div>
+    <div class="navtabs">
+        <img src="/assets/Screenshot from 2022-04-30 13-01.png">
+        <div class="profilenav">
+            <div>
+                <nav mat-tab-nav-bar [ngClass]="['tabs']">
+
+                    <a mat-tab-link [routerLink]="(['/layout/imagingrequest'])" routerLinkActive="active-link">Lab
+                        Request</a>
+                    <p>|</p>
+                    <a mat-tab-link class="sign" [routerLink]="(['/layout/imagingreports'])"
+                        routerLinkActive="active-link">Lab Reports</a>
+                    <p>|</p>
+                    <a mat-tab-link [routerLink]="(['/layout/eclaims'])" routerLinkActive="active-link">E-Claims</a>
+                    <p>|</p>
+                    <a mat-tab-link [routerLink]="(['/layout/tests'])" routerLinkActive="active-link">Lab Tests</a>
+                    <p>|</p>
+                    <a mat-tab-link [routerLink]="(['/layout/payments'])" routerLinkActive="active-link">Payments</a>
+                    <p>|</p>
+                    <a mat-tab-link [routerLink]="(['/layout/webmangment'])" routerLinkActive="active-link">Web Management</a>
+                </nav>
+            </div>
+
+            <div class="profile">
+                <img [src]="preview + imageSrc"
+                    alt="" />
+                <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+                    <mat-icon>arrow_drop_down</mat-icon>
+                </button>
+                <mat-menu #menu="matMenu">
+                    <button mat-menu-item (click)="profile()">
+                        <mat-icon>assignment_ind</mat-icon>
+                        <span>Profile</span>
+                    </button>
+                    <button mat-menu-item (click)="editprofile()">
+                        <mat-icon>manage_accounts</mat-icon>
+                        <span> Edit Profile</span>
+                    </button>
+                    <button mat-menu-item (click)="logout()">
+                        <mat-icon>logout</mat-icon>
+                        <span>Logout</span>
+                    </button>
+                </mat-menu>
+            </div>
+
+        </div>
+
+    </div>
+    <router-outlet></router-outlet>
+</div>

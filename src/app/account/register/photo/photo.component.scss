@@ -1,0 +1,55 @@
+.add {
+       
+        position: relative;
+        display: grid;
+        grid-template-columns: auto auto auto;
+    .imagesadd {
+        
+        height: 100px;
+        width: 100px;
+        border-radius: 10px;
+        background-color: hsl(220deg 3% 80%);
+        border: none;
+        margin: 10px;
+        .btnplus{
+            height: 30px;
+            width: 30px;
+            border-radius: 50%;
+            font-size: 20px;
+            font-weight: 600;
+            background-color: white;
+            border: none;
+        }
+        
+    }
+    .imgadd{
+        position: relative;
+        button{
+            position: absolute;
+            bottom: 94px;
+            left: 90px;
+            border-radius: 50%;
+        }
+    }
+   
+   
+   
+}
+.nav {
+    display: flex;
+    justify-content: flex-end;
+    button {
+        width: 50%;
+        height: 50px;
+        margin-top: 30px;
+        background-image: linear-gradient(to right, #1a1d6c, #00b790);
+        padding: 5px;
+        font-size: 18px;
+        border: none;
+        border-radius: 5px;
+        color: white;
+    }
+    button:hover {
+        background-image: linear-gradient(to right, #00b790, #1a1d6c);
+    }
+}

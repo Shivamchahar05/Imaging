@@ -1,0 +1,16 @@
+.bt {
+    display: flex;
+    justify-content: space-between;
+    button {
+        background-image: linear-gradient(to right, hsl(235deg 58% 27%), hsl(151deg 36% 55%));
+        border: 0px;
+        color: white;
+        width: 100px;
+        height: 40px;
+        border-radius: 5px;
+        font-size: 15px;
+    }
+    .second_btn {
+        margin-left: 70px;
+    }
+}

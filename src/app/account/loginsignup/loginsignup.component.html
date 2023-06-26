@@ -1,0 +1,18 @@
+<div class="container">
+    <div class="images">
+        <img src="/assets/Screenshot from 2022-04-27 12-20-44.png">
+    </div>
+    <div class="content">
+        <div>
+            <h1>Welcome to Livia<br>Lab Portal</h1>
+            <nav mat-tab-nav-bar [ngClass]="['tabs']">
+
+                <a mat-tab-link routerLink="/login" routerLinkActive="active-link">
+                    Login</a>
+                <a mat-tab-link class="sign" routerLink="/signup" routerLinkActive="active-link">
+                    Sign Up</a>
+            </nav>
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>

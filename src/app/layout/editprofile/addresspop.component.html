@@ -1,0 +1,25 @@
+<div class="first">
+    <h1 class="add"><i>Drag and drop marker to the location of your</i></h1>
+    <hr>
+    <div mat-dialog-content class="search">
+        <mat-form-field appearance="outline">
+            <mat-label>Enter location to search on to map</mat-label>
+            <input matInput>
+        </mat-form-field>
+    </div>
+    <iframe src="assets/GoogleMapTA.jpg" style="width: 100%; height: 500px;"></iframe>
+    <div class="content">
+        <p>Location</p>
+        <div mat-dialog-content>
+            <mat-form-field appearance="outline">
+                <mat-label>Address Locations</mat-label>
+                <input matInput [(ngModel)]="data">
+            </mat-form-field>
+        </div>
+        <div mat-dialog-actions>
+            <button mat-button (click)="onNoClick()">No Thanks</button>
+            <button mat-button [mat-dialog-close]="data" cdkFocusInitial>Ok</button>
+        </div>
+    </div>
+</div>
+

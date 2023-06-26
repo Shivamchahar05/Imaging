@@ -1,0 +1,32 @@
+<div>
+    <h2>Add Lab Photos</h2>
+    <div>
+        <form [formGroup]="formservice.register" >
+            <ng-container formGroupName="images">
+            
+            <div class="add">
+
+                <button mat-button (click)="imagesfile.click()" class="imagesadd">
+                    <input  id="file" type="file" class="form-control" multiple="" #imagesfile
+                        (change)="onFileChange($event)" style="display: none;">
+                    <button class="btnplus">+</button>
+                </button>
+                <div *ngFor='let url of img;let idx=index' class="imgadd" >
+                    <img [src]="url" height="100" width="100px"
+                        style=" border-radius: 10px; margin-top: 10px; margin-left: 10px;"> <br />
+                   
+                    <button (click)="removephoto(idx)">x</button>
+                </div>
+
+            </div>
+
+
+
+            <div class="nav">
+                <button type="submit"  mat-raised-button color="primary" (click)="registervalidation()">Send for Validations </button>
+            </div>
+            </ng-container>
+
+        </form>
+    </div>
+</div>

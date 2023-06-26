@@ -1,0 +1,73 @@
+section {
+    form {
+        display: flex;
+        flex-direction: column;
+        label {
+            color: black;
+            font-weight: 500;
+        }
+        .logo {
+            background-color: #f4f4f4;
+            width: 100px;
+            height: 100px;
+            text-align: center;
+            padding: 5px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            position: relative;
+            .cancel{
+              position: absolute;
+              margin-left: 80px;
+              top:-5px
+        
+            }
+            button { 
+                margin-top: 15px;
+                font-size: 30px;
+                height: 40px;
+                width: 40px;
+                border-radius: 50%;
+                background-color: white;
+                border: 1px solid gray;
+            }
+        }
+        mat-form-field {
+            position: relative;
+        }
+        .loc {
+            position: absolute;
+            right: 0;
+            bottom: 16px;
+        }
+        .nav {
+            display: flex;
+            justify-content: flex-end;
+            button {
+                width: 50%;
+                height: 50px;
+                margin-top: 10px;
+                background-image: linear-gradient(to right, #1a1d6c, #00b790);
+                padding: 5px;
+                font-size: 18px;
+                border: none;
+                border-radius: 5px;
+                color: white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            button:hover {
+                background-image: linear-gradient(to right, #00b790, #1a1d6c);
+            }
+        }
+        ::ng-deep .mat-form-field-outline {
+            background-color: white;
+            border-radius: 8px;
+        }
+    }
+}
+::ng-deep{
+    .mat-progress-spinner circle, .mat-spinner circle{
+        stroke: white;
+    }
+}

@@ -1,0 +1,52 @@
+.navtabs {
+    background-image: linear-gradient(to right, hsl(235deg 58% 27%), hsl(151deg 36% 55%));
+   
+    display: flex;
+    justify-content: space-between;
+    
+    img {
+        height: 70px;
+       width: 120px;
+        margin-left: 110px;
+       
+    }
+    .profilenav {
+        display: flex;
+        .profile {
+            img {
+                height: 50px;
+                width: 50px;
+                border-radius: 50%;
+                margin-top: 10px;
+            }
+           
+
+           
+            button {
+               
+                border: none;
+                background-color: transparent;
+            }
+        }
+        p {
+            margin-top: 35px;
+            color: white;
+            font-size: 20px;
+        }
+        a {
+            margin-top: 22px;
+            font-size: 20px;
+            color: white;
+        }
+        .active-link {
+            background-color: white;
+            color: hsl(151deg 36% 55%);
+            border-radius: 10px 10px 0px 0px;
+        }
+    }
+}
+
+.mat-tab-nav-bar,
+.mat-tab-header {
+    border-bottom: none;
+}

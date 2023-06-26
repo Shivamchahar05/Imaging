@@ -1,0 +1,172 @@
+.header {
+    display: flex;
+    margin-top: 10px;
+    font-size: 20px;
+    .home {
+        margin-left: 110px;
+    }
+    p {
+        margin-left: 10px;
+        color: gray;
+    }
+    a {
+        margin-left: 10px;
+        color: gray;
+    }
+    .edit {
+        color: hsl(244deg 48% 31%);
+        font-weight: 500;
+    }
+}
+.main {
+    padding-left: 110px;
+    padding-right: 110px;
+    background-color: hsl(204deg 16% 94%);
+    height: 830px;
+    p {
+        padding-top: 15px;
+        padding-bottom: 15px;
+        font-size: 20px;
+        color: hsl(244deg 48% 31%);
+        font-weight: 600;
+    }
+    .main_under {
+        padding: 20px;
+        box-shadow: 1px 0px 3px 3px white;
+        .edit{
+            position: relative;
+            a{
+                position: absolute;
+                bottom: 50px;
+                left: 80px;
+            }
+
+        }
+        .add {
+
+            .imagesadd {
+              
+                height: 100px;
+                width: 100px;
+                border-radius: 10px;
+                background-color: hsl(220deg 3% 80%);
+                border: none;
+                margin: 10px;
+                margin-left: 0px;
+                .btnplus {
+                    height: 30px;
+                    width: 30px;
+                    border-radius: 50%;
+                    font-size: 20px;
+                    font-weight: 600;
+                    background-color: white;
+                    border: none;
+                }
+            }
+        }
+        img {
+            height: 70px;
+            width: 100px;
+        }
+        p {
+            color: black;
+            font-size: 15px;
+            font-weight: 500;
+        }
+        .detail {
+            display: flex;
+            justify-content: space-between;
+            mat-form-field {
+                position: relative;
+            }
+            .loc {
+                position: absolute;
+                right: 0;
+                bottom: 16px;
+            }
+        }
+        .second_details {
+            display: flex;
+            justify-content: space-between;
+        }
+        .photo {
+            .add {
+                position: relative;
+                display: grid;
+                grid-template-columns: auto auto auto auto auto auto auto auto;
+                column-gap: 50px;
+                width: 200px;
+                .imagesadd {
+                    height: 100px;
+                    width: 100px;
+                    border-radius: 10px;
+                    background-color: hsl(220deg 3% 80%);
+                    border: none;
+                    margin: 10px;
+                    margin-left: 0px;
+                    .btnplus {
+                        height: 30px;
+                        width: 30px;
+                        border-radius: 50%;
+                        font-size: 20px;
+                        font-weight: 600;
+                        background-color: white;
+                        border: none;
+                    }
+                }
+                .imgadd {
+                    position: relative;
+                    button {
+                        position: absolute;
+                        bottom: 94px;
+                        left: 90px;
+                        border-radius: 50%;
+                    }
+                }
+            }
+        }
+        .btn {
+            display: flex;
+            justify-content: flex-end;
+            .cancel {
+                background-color: white;
+                width: 100px;
+                height: 40px;
+                border: none;
+                border-radius: 5px;
+                color: hsl(151deg 36% 55%);
+            }
+            .update {
+                background-image: linear-gradient(to right, hsl(235deg 58% 27%), hsl(151deg 36% 55%));
+                width: 100px;
+                height: 40px;
+                border: none;
+                border-radius: 5px;
+                margin-left: 20px;
+                color: white;
+            }
+        }
+    }
+}
+:host {
+    .detail {
+        mat-form-field {
+            width: 500px;
+        }
+    }
+    .second_details {
+        mat-form-field {
+            width: 500px;
+        }
+        .bio {
+            mat-form-field {
+                width: 1030px;
+            }
+        }
+    }
+}
+::ng-deep {
+    .mat-form-field-appearance-outline .mat-form-field-outline {
+        background-color: white;
+    }
+}

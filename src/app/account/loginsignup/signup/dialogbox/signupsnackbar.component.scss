@@ -1,0 +1,27 @@
+section{
+    .location{
+        margin-top: 10px;
+    }
+}
+::ng-deep{
+    .mat-form-field-infix{
+        width: 500px;
+    }
+    .mat-form-field-infix-outline{
+        color: black;
+    }
+}
+.btn{
+    display: flex;
+    justify-content: center;
+    button{
+        background-color: #64ce4c;
+        border: 0px;
+        color: white;
+        width: 200px;
+        height: 40px;
+        border-radius: 5px;
+        font-size: 15px;
+        
+    }
+}

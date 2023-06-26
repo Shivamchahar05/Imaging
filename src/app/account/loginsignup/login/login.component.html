@@ -1,0 +1,30 @@
+<section>
+    <form [formGroup]="signInForm" (ngSubmit)="nextpage()">
+        <div>
+            <label>Email</label>
+            <mat-form-field appearance="outline">
+                <input matInput placeholder="Enter Email" type="email" required formControlName="email"
+                    placeholder="user@gmail.com" />
+                <mat-error *ngIf=" formControls?.email?.errors?.required"> *email required
+                </mat-error>
+                <mat-error *ngIf=" formControls?.email?.errors?.pattern"> *space are not valid
+                </mat-error>
+            </mat-form-field>
+        </div>
+        <div>
+            <label>Password</label>
+            <mat-form-field appearance="outline">
+                <input matInput placeholder="Enter Password" required formControlName="password"
+                    placeholder="********" />
+                <mat-error *ngIf=" formControls?.password?.errors?.required"> *password required</mat-error>
+                <mat-error *ngIf=" formControls?.password?.errors?.pattern"> *space are not valid</mat-error>
+            </mat-form-field>
+        </div>
+        <div class="forget-and-submit">
+            <a (click)="forgetpassword()">Forget Password?</a>
+            <button mat-button type="submit" > <ng-container *ngIf="!spinner">Get Started</ng-container> 
+                <mat-spinner *ngIf="spinner" [diameter]="40"></mat-spinner>
+            </button>
+        </div>
+    </form>
+</section>

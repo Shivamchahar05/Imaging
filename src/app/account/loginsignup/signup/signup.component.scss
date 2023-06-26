@@ -1,0 +1,68 @@
+*{
+    margin: 0px;
+    box-sizing: border-box;
+}
+section{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    // height: 300px;
+    // background-color: rgb(248, 233, 233);   
+    // overflow-y: scroll;
+    .data{
+        height: 450px; 
+        form{
+            ::ng-deep{
+                .mat-form-field-outline{
+                    background-color: white;
+                    border-radius: 5px;
+                }
+            }
+            .name{
+                display: grid;
+                grid-template-columns: 20% 38% 38%;
+                column-gap: 5px;
+            }
+            .contact{
+                display: grid;
+                grid-template-columns: 25% 73%;
+                column-gap: 5px;
+            }
+            .email{
+                display: flex;
+                flex-direction: column;
+                width: 98%;
+            }
+            .pass{
+                width: 98%;
+                display: flex;
+                flex-direction: column;
+            }
+            .nav{
+                display: flex;
+                justify-content: flex-end;
+                align-items: flex-end;
+                button{  width: 30%;
+                    height: 50px;
+                    background-image: linear-gradient(to right,#193171,#409f8a);
+                    margin-top: 10px;
+                    margin-right: 10px;
+                    margin-bottom: 5px;
+                    color: white;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    
+
+                }
+            }
+        }
+    }}
+    ::ng-deep{
+        .mat-progress-spinner circle, .mat-spinner circle{
+            stroke: white;
+        }
+    }
+ 
+

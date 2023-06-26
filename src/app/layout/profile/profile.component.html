@@ -1,0 +1,108 @@
+<div class="container">
+    <div class="head">
+        <div class="headunder">
+            <p><a (click)="home()">Home</a></p>
+            <p>/</p>
+            <p class="myprofile">My Profile</p>
+        </div>
+    </div>
+    <div class="main">
+        <div class="mainunder">
+            <p class="my">My Profile</p>
+            <div class="firstmain">
+                <div class="sidecontent">
+                    <div class="image">
+                        <div class="userimage">
+                            <div>
+                                <img class="imageunder" [src]="preview + imageSrc">
+                                <div class="test">{{Name}}</div>
+                            </div>
+                        </div>
+                        <div class="text">
+                            <div class="icon"><i class="fa-solid fa-envelope"></i> <span>{{Email}}</span>
+                            </div>
+                            <div class="icon"><i class="fa-solid fa-phone"></i><span>+{{Phonenumber}}</span></div>
+                            <div class="icon"><i class="fa-solid fa-location-dot"></i><span>{{city_name}} ,
+                                    {{country_name}}</span>
+                            </div>
+                        </div>
+                        <div class="edit">
+                            <button (click)="editprofile()">Edit Profile</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="rightmain">
+                    <div class="firstbox">
+                        <div class="photo">Imaging Photos</div>
+                        <div class="carousal">
+                            <div class="carousalunder">
+                                <mat-carousel timings="250ms ease-in" [autoplay]="true" [interval]="6000" color="accent"
+                                    maxWidth="auto" [proportion]="25" [slides]="5" [loop]="true" [hideArrows]="false"
+                                    [hideIndicators]="false" [useKeyboard]="true" [useMouseWheel]="false"
+                                    orientation="ltr">
+                                    <mat-carousel-slide #matCarouselSlide *ngFor="let slide of slides; let i = index"
+                                        [image]="preview + slide" overlayColor="#00000040" [hideOverlay]="false">
+                                    </mat-carousel-slide>
+                                </mat-carousel>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="secondbox">
+                        <div>
+                            <div class="bio">Bio</div>
+                            <div>{{bio}}</div>
+                        </div>
+                    </div>
+                    <div class="thirdbox">
+                        <div class="document">Documents</div>
+                        <div class="underdocument">
+                            <div class="tax" *ngIf="tax_compliance"><img [src]="preview + tax_compliance">
+                                <p>Tax Compliance</p>
+                            </div>
+                            <div class="CR12" *ngIf="cr_12"><img [src]="preview + cr_12">
+                                <p>CR12</p>
+                            </div>
+                            <div class="KRA " *ngIf="kra_pin_certificate" ><img [src]="preview + kra_pin_certificate">
+                                <p>KRA PIN<br>Compliance</p>
+                            </div>
+                            <div class="Regulatory1" *ngIf="regulator_licenses_1"><img [src]="preview + regulator_licenses_1">
+                                <p>Regulatory<br>Licence 1</p>
+                            </div>
+                            <div class="Regulatory2" *ngIf="regulator_licenses_2"><img [src]="preview + regulator_licenses_2">
+                                <p>Regulatory<br>Licence 2</p>
+                            </div>
+                            <div class="Regulatory3" *ngIf="regulator_licenses_3"><img [src]="preview + regulator_licenses_3">
+                                <p>Regulatory<br>Licence 3</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="fourthbox">
+                        <div class="insurancecompany">Imaging Insurance Company</div>
+                        <div class="insurence">
+                            <div *ngFor="let ins of insurence">
+                                <div><img [src]="preview + ins.avatar"></div>
+                                <p>{{ins.name}}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="fifthbox">
+                        <div class="fifthfrist">
+                            <div class="payment">
+                                Payment Details
+                            </div>
+                            <div class="addbutton">
+                                <button>Add Payments Details</button>
+                            </div>
+                        </div>
+                        <div class="nodeatils">
+                            <div>
+                                <div><img src="/assets/Screenshot from 2022-05-03 16-23-24.png"></div>
+                                <div class="textnodetail">No Details Added</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

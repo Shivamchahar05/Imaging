@@ -1,0 +1,39 @@
+.container{
+    display: flex;
+    height: 700px;
+    border-radius: 10px;
+    img{
+        width: 480px;
+        height: 700px;
+        border-radius: 10px 0px 0px 10px;
+    }
+    .secondcon{
+        padding: 30px;
+        // overflow-y: scroll;
+        width:800px ;
+        position: relative;
+
+        i{
+            position: absolute;
+            top: 55px;
+            left:60px;
+            font-size: 20px;
+        }
+     .stepper{
+        background-color: hsl(192deg 14% 93%);
+       
+
+     }
+}
+}
+::ng-deep{
+    .mat-horizontal-stepper-header-container{
+        margin-left: 55%;
+    }
+}
+// ::ng-deep .mat-horizontal-stepper-header{
+//     pointer-events: none !important;
+// }
+::ng-deep .mat-step-header .mat-step-icon-selected{
+    background-color: hsl(141deg 51% 65%);
+}

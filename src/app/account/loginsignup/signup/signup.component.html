@@ -1,0 +1,72 @@
+<section>
+    <div class="data">
+        <form [formGroup]="signupForm" (ngSubmit)="link()">
+            <label>Name of Admin</label>
+            <div class="name">
+                <mat-form-field appearance="outline" >
+                    <mat-label>Title</mat-label>
+                    <mat-select formControlName="name_prefix">
+                        <mat-option value="Mr">Mr.</mat-option>
+                        <mat-option value="Mrs">Mrs.</mat-option>
+                        <mat-option value="Other">Other</mat-option>
+                    </mat-select>
+                    <mat-error *ngIf="signupForm?.controls?.name_prefix?.errors?.required">*Required</mat-error>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>First Name</mat-label>
+                    <input matInput formControlName="first_name" place holder="First Name" />
+                    <mat-error *ngIf="signupForm?.controls?.first_name?.errors?.required">*First name required</mat-error>
+                    <mat-error *ngIf="signupForm?.controls?.first_name?.errors?.pattern">*space are not valid</mat-error>
+                    <mat-error *ngIf="signupForm?.controls?.first_name?.errors?.minlength">*Please enter min 3 char</mat-error>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Last Name</mat-label>
+                    <input matInput formControlName="last_name" placeholder="Last Name">
+                    <mat-error *ngIf="signupForm?.controls?.last_name?.errors?.required">*Last name required</mat-error>
+                    <mat-error *ngIf="signupForm?.controls?.last_name?.errors?.pattern">*space are not valid</mat-error>
+                </mat-form-field>
+            </div>
+            <label for="">Contact Number</label>
+            <div class="contact">
+                <mat-form-field appearance="outline" >
+                    <mat-label>Country</mat-label>
+                    <mat-select formControlName="country_code">
+                        <mat-option value="ke">ke</mat-option>
+                        
+                    </mat-select>
+                    <mat-error *ngIf="signupForm?.controls?.country_code?.errors?.required">*Code required</mat-error>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Enter Phone Number</mat-label>
+                    <input matInput formControlName="phone_number" placeholder="Phone Number">
+                    <mat-error *ngIf="signupForm?.controls?.phone_number?.errors?.required">*Phone num required</mat-error>
+                    <mat-error *ngIf="signupForm?.controls?.phone_number?.errors?.pattern">*Please enter the 9 digit number first number is 7 and
+                        second number is 9 digit number</mat-error>
+                </mat-form-field>
+            </div>
+            <div class="email">
+                <label>Email</label>
+                <mat-form-field appearance="outline">
+                    <input matInput formControlName="email" placeholder="abc@gmail.com" required>
+                    <mat-error *ngIf="signupForm?.controls?.email?.errors?.required">*Email required</mat-error>
+                <mat-error *ngIf="signupForm?.controls?.email?.errors?.email">*Enter correct email</mat-error>
+                </mat-form-field>
+            </div>
+            <div class="pass">
+                <label>Create Password</label>
+                <mat-form-field appearance="outline">
+                    <input type="password" matInput formControlName="password" placeholder="password" required>
+                    <mat-error *ngIf="signupForm?.controls?.password?.errors?.required">*Password required</mat-error>
+                    <mat-error style="font-size: 15px;" *ngIf="signupForm?.controls?.password?.errors?.minlength">*Enter min eight characters</mat-error>
+                    <mat-error *ngIf="signupForm?.controls?.password?.errors?.pattern">*space are not valid</mat-error>
+                </mat-form-field>
+            </div>
+            <div class="nav">
+                <button type="submit" mat-raised-button color="primary">
+                <ng-container *ngIf="!spinner">Signup</ng-container> 
+                    <mat-spinner *ngIf="spinner" [diameter]="40" class="spin"></mat-spinner>
+                </button>
+            </div>
+        </form>
+    </div>
+</section>

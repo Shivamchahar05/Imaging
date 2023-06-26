@@ -1,0 +1,19 @@
+<mat-icon aria-hidden="false" aria-label="Example home icon"  class="cancel" (click)="onNoClick()">cancel</mat-icon>
+<section>
+    <header>
+        <h3>Verify OTP</h3>
+    </header>
+    <div>
+        <div class="main">
+            <p>Please insert the one time password sent to the user's phone number to accept the lab request </p>
+            <div class="otp"><ng-otp-input  (onInputChange)="onOtpChange($event)"  [config]="{length:4}"></ng-otp-input></div>
+            <p class="link">Not recieved yet? <a (click)="resendOTP()">Resend</a></p>
+            <div class="lastsection">
+                <div class="lastunder">
+                    <button class="cancel">Cancel</button>
+                    <button class="confirm" (click)="confirm()">Confirm OTP</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

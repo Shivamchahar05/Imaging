@@ -1,0 +1,49 @@
+<mat-icon aria-hidden="false" aria-label="Example home icon"  class="cancel" (click)="close()">cancel</mat-icon>
+<section>
+    <header>
+        <h1>Accept Test</h1>
+    </header>
+    <main>
+        <div class="document">
+            <div class="data">
+                <div class="image">
+                    <img [src]="imgUrl + kra_pin_certificate" alt="insurance-img">
+                </div>
+                <h4>Membership Card</h4>
+            </div>
+            <div class="data">
+                <div class="image">
+                    <img [src]="imgUrl + tax_compliance "  alt="insurance-img">
+                </div>
+                <h4>Membership Card</h4>
+            </div>
+            <div class="data">
+                <div class="image">
+                    <img [src]="imgUrl + cr_12"  alt="insurance-img">
+                </div>
+                <h4>Membership Card</h4>
+            </div>
+            <div class="data">
+                <div class="image">
+                    <img [src]="imgUrl + regulator_licenses_1"  alt="insurance-img">
+                </div>
+                <h4>Membership Card</h4>
+            </div>
+        </div>
+        <div class="description">
+            <mat-checkbox (click)="$event.stopPropagation()"
+            (change)="$event ? selection.toggle(true) : null"
+            [checked]="selection.isSelected(true)">
+        </mat-checkbox>
+            <div class="term">
+                <span>I have verified the insurance details</span>
+                <span>OTP will be send to the patient. Please get  the OTP from patient.</span>
+            </div>
+        </div>
+    </main>
+    <div class="btn">
+        <button class="cancel" (click)="close()" mat-raised-button>Cancel</button>
+        <button class="process" (click)="sendOTP()" mat-raised-button [disabled]="disabledBtn"><mat-spinner [diameter]="40" *ngIf="updateData"></mat-spinner>Send OTP</button>
+    </div>
+</section>
+
